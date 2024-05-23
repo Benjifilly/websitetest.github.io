@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Angkor&family=Lilita+One&family=Rubik+Gemstones&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #000000;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .container {
+            margin: auto;
+            margin-top: -20px;
+            overflow: hidden;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            font-size: 25px;
+            text-align: center;
+            position: relative;
+            bottom: 19px;
+            padding-right:10px ;
+            gap: 10px;
+        }
+
+        .container h1 {
+            position: relative;
+            height: 1vh;
+            padding-left: 10px;
+        }
+        header {
+            background: #29292936;
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            color: #ffffff;
+        }
+
+        .custom-anchor {
+                background: linear-gradient(0deg, rgb(255, 255, 255), rgb(82, 82, 82)) no-repeat center bottom / 0 var(--bg-h);
+                transition: background-size 350ms;
+                --bg-h: 100%;
+            }
+            .custom-anchor:where(:hover, :focus-visible) {
+                background-size: 100% var(--bg-h);
+                background-position-x: center;
+                text-decoration: underline;
+            }
+            
+            .underline {
+                padding-bottom: 2px;
+                --bg-h: 2px;
+            }
+            .custom-anchor {
+                text-decoration: none;
+                color: inherit;
+                line-height: 1;
+            }
+        
+        .title {
+            text-align: center;
+            font-size: 200px;
+            font-family: "Lilita One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: #ffffff;
+            margin-bottom: 0;
+            margin-top: 34vh;
+        }
+
+        .website_title {
+            padding-left: 20px;
+            font-size: 40px;
+        }
+
+        .under-title {
+            text-align: center;
+            font-size: 20px;
+            font-family: "Lilita One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: #ffffff;
+            margin-top: -10px;
+            margin-bottom: 34vh;
+        }
+
+
+        .lilita-one-regular {
+            font-family: "Lilita One", sans-serif;
+            font-weight: 400;
+            font-style: normal; 
+          }
+
+          .parallax {
+            background-image: url("https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+          
+            min-height: 300px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: all 0.5s ease-in-out;
+          }
+
+
+
+        button {
+            position: absolute;
+            display: inline-block;
+            cursor: pointer;
+            outline: none;
+            border: 0;
+            vertical-align: middle;
+            text-decoration: none;
+            background: transparent;
+            padding: 0;
+            font-size: inherit;
+            font-family: inherit;
+        }
+
+        button.learn-more {
+            width: 11.5rem;
+            height: auto;
+        }
+
+        button.learn-more .circle {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            position: relative;
+            display: block;
+            margin: 0;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: #2b2b34;
+            border-radius: 1.625rem;
+        }
+
+        button.learn-more .circle .icon {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background: #fff;
+        }
+
+        button.learn-more .circle .icon.arrow {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            left: 0.425rem;
+            width: 1.125rem;
+            height: 0.125rem;
+            background: none;
+        }
+
+        button.learn-more .circle .icon.arrow::before {
+            position: absolute;
+            content: "";
+            top: -0.29rem;
+            right: 0.0625rem;
+            width: 0.625rem;
+            height: 0.625rem;
+            border-top: 0.125rem solid #fff;
+            border-right: 0.125rem solid #fff;
+            transform: rotate(45deg);
+        }
+
+        button.learn-more .button-text {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            position: absolute;
+            top: -4px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 0.75rem 0;
+            margin: 0 0 0 1.85rem;
+            color: #ffffff;
+            font-weight: 700;
+            line-height: 1.6;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        button:hover .circle {
+            width: 100%;
+        }
+
+        button:hover .circle .icon.arrow {
+            background: #fff;
+            transform: translate(1rem, 0);
+        }
+
+        button:hover .button-text {
+            color: #fff;
+        }
+
+        .viga-regular {
+            font-family: "Viga", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+        .text-zone {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff; 
+            text-align: center;
+
+        }
+
+        .glass {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba( 255, 255, 255, 0.05 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 2px );
+            -webkit-backdrop-filter: blur( 2px );
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .card {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-item {
+            flex: 1;
+            margin: 0 10px;
+            padding: 20px;
+            height: 180px;
+            width: 300px;
+            box-shadow:
+            1.8px 1.5px 3.7px rgba(255,255,255, -0.007),
+            3.9px 3.4px 6.9px rgba(255,255,255, -0.011),
+            6.7px 5.7px 10.4px rgba(255,255,255, -0.009),
+            10.7px 9.1px 15.5px rgba(255,255,255, 0.009),
+            16.9px 14.4px 25.4px rgba(255,255,255, 0.077),
+            28.5px 24.2px 49.2px rgba(255,255,255, 0.08),
+            60px 51px 200px rgba(255,255,255, 0.07)
+            ;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        .title2 {
+            text-align: center;
+            font-size: 40px;
+            font-family: "Viga", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: #ffffff;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        .image_card {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image_card-item {
+            flex: 1;
+            margin: 0 10px;
+            padding: 20px;
+            width: 120px;
+            height: 230px;
+            border-radius: 10px;
+            transition: width 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 17px 16px 7px 0px rgba(0,0,0,0.1);
+        
+            background-color: #f0f0f0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .image_card-item::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .image_card-item:hover::before {
+            opacity: 1;
+        }
+        .image_card-item h2,
+        .image_card-item p {
+            color: #ffffff;
+        }
+
+        .image_card-item h2 {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            margin: 0;
+        }
+        
+        .image_card-item p {
+            position: absolute;
+            bottom: 40px; 
+            left: 10px;
+            margin: 0;
+        }
+
+        .image_card-item h2, .image_card-item p {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.5s ease;
+        }
+        
+        .image_card-item:hover h2, .image_card-item:hover p {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .image_card-item:hover {
+            width: 150px;
+        }
+
+        .image_card-item:hover h2, .image_card-item:hover p {
+            transform: translateY(0);
+        }
+
+        .image_card-item .background {
+            position: absolute;
+            transform: translateY(80px);
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%; 
+            background: linear-gradient(to top, rgba(0,0,0,3.8), transparent);
+            z-index: 1;
+            transition: 0.3s all ease-in-out;
+        }
+
+        .image_card-item:hover .background {
+            transform: translateY(0);
+        }
+
+        .image_card-item h2, .image_card-item p {
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container viga-regular">
+            <h1 class="website_title">Website Test</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="underline custom-anchor">Home</a></li>
+                    <li><a href="index.html" class="underline custom-anchor">About</a></li>
+                    <li><a href="index.html" class="underline custom-anchor">Services</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <h1 class="title">Title</h1>
+    <h6 class="under-title">Edzar's creation</h6>
+
+
+    <div class="parallax custom_imals
+    ge">
+        <div class="glass">
+            <div class="text-zone viga-regular">
+                <p>Your text goes here</p>
+            </div>
+            <button id="learn-more-button" class="learn-more" style="top: 200px;">
+                <div class="circle"><span class="icon arrow"></span></div>
+                <p class="button-text">Learn More</p>
+            </button>
+        </div>
+    </div>
+    
+    <br><br><br><br><br>
+    
+    <h1 class="title2">Title :</h1>
+
+    <br><br><br><br><br>
+    
+    <div class="image_card">
+        <div class="image_card-item" style="background-image: url('https://preview.redd.it/hwyb-this-character-cid-kagenou-shadow-using-only-5e-v0-d5ze8mw4j0ia1.jpg?width=640&crop=smart&auto=webp&s=ff9c97871f590969895445dd9b156228c903b4c7');">
+            <div class="background"></div>
+            <h2>Card 1</h2>
+            <p>This is the content of card 1.</p>
+        </div>
+        <div class="image_card-item 2" style="background-image: url('https://preview.redd.it/how-would-claire-alexia-and-others-react-to-cid-being-v0-9qoxx4d81oqa1.jpg?width=640&crop=smart&auto=webp&s=f052954f57f210babc89297078dc5b5ce44de74a');">
+            <div class="background"></div>
+            <h2>Card 2</h2>
+            <p>This is the content of card 2.</p>
+        </div>
+        <div class="image_card-item 3" style="background-image: url('https://preview.redd.it/how-would-claire-alexia-and-others-react-to-cid-being-v0-9qoxx4d81oqa1.jpg?width=640&crop=smart&auto=webp&s=f052954f57f210babc89297078dc5b5ce44de74a');">
+            <div class="background"></div>
+            <h2>Card 3</h2>
+            <p>This is the content of card 3.</p>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/MorphSVGPlugin.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+
+        gsap.from(".container", { opacity: 0, duration: 1, y: 50, ease: "power2.out" });
+        gsap.from(".title", { opacity: 0, duration: 1, delay:0.4, y: 50, ease: "power1.out" });
+        gsap.from(".under-title", { opacity: 0, duration: 1, delay:0.6, y: 50, ease: "power1.out" });
+
+        gsap.from(".text-zone", {
+            scrollTrigger: {
+                trigger: ".parallax",
+                start: "top 75%" 
+            },
+            opacity: 0,
+            duration: 2,
+            y: -75,
+            ease: "power2.out"
+        });
+
+        gsap.from(".glass", {
+            scrollTrigger: {
+                trigger: ".parallax",
+                start: "top 75%" 
+            },
+            opacity: 0,
+            duration: 1,
+            ease: "power2.out"
+        });
+
+        gsap.from("#learn-more-button", {
+            scrollTrigger: {
+                trigger: ".parallax",
+                start: "top 75%"
+            },
+            opacity: 0,
+            duration: 2,
+            y: 50,
+            ease: "power2.out"
+        });
+
+        gsap.from(".image_card-item", {
+            scrollTrigger: {
+                trigger: ".parallax",
+                start: "top 30%"
+            },
+            opacity: 0,
+            duration: 1,
+            y: 50,
+            x: -10,
+            ease: "power2.out",
+            stagger: 0.5
+        });
+    </script>
+</body> 
+</html>
